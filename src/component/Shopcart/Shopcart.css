@@ -1,0 +1,171 @@
+/*.modal{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-height: 96vh;
+    margin-top: 50px;
+    margin-left: 150px;
+    
+}
+.modal img{
+    max-width: 95rem;
+    max-height: 80vh;
+    margin: 0 auto;
+}
+.modal__desc{
+    flex: 1 1;
+    margin: 1rem;
+    margin-top: 110px;
+}
+.closemodal{
+    
+    right:1rem;
+    top:2.5rem;
+    z-index: 1000;
+    cursor: pointer;
+}
+.modal__button{
+display: flex;
+flex-direction: column;
+}
+.btn{
+    background-color: lightslategray;
+    color: white;
+    border-radius: 10px;
+    width:30%;
+    margin-top: 40px;
+
+
+}*/
+
+/* shopcart*/
+.cart{
+    
+    background-color: lightgrey;
+    border: 20px;
+    /*flex: 1 20rem;*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-height: 96vh;
+    margin-top: 50px;
+    
+}
+.cart_checkout{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+.modal__title{
+margin-left: 10px;
+margin-top: 50px;
+
+}
+.modal__price{
+    margin-right: 120px;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+.modal__icon{
+    margin-right: 120px;
+    margin-top: 40px;
+}
+.removebtn{
+    margin-right: 120px;
+    margin-top: 40px;
+    
+}
+.sidebar{
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 50px;  
+
+}
+.items img{
+   width: 250px;
+   height: 250px; 
+}
+.cart__btn{
+    margin: 10px;
+    background-color: rgb(8, 3, 14);
+    color: rgb(245, 241, 242);
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+}
+.cart__btn1{
+    margin: 10px;
+    background-color: rgb(11, 26, 236);
+    color: white;
+    padding: 10px;
+    
+    border-radius: 20px;
+    font-weight: bold;
+    
+}
+
+.modal__total{
+    float: right;
+}
+.total{
+    
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.cart__1{
+border-bottom: 1rem lightgrey;
+padding:10px;
+font-weight: bold;
+font-size: 17px;
+background-color: honeydew;
+box-shadow: 0 5px 5px 0 lightslategrey;
+}
+.addicon{
+    margin:10px;
+    font-weight: bold;
+    border-radius: 20%;
+background-color: rgb(155, 25, 25);
+color: white;
+    
+}
+.removeicon{
+    margin: 10px;
+    font-weight: bold;
+    border-radius: 20%;
+    background-color: rgb(155, 25, 25);
+    color: white;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 500px;
+    font-weight: normal;
+    font-weight: bold;
+
+}
+.form input{
+    padding: 12px;
+    width:50%;
+    
+    border-radius: 5px;
+}
+.cartbtn{
+    margin: 10px;
+    background-color: rgb(236, 11, 11);
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 30%;
+    margin-top: 30px;
+    margin-left: 500px;
+}

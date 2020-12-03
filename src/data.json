@@ -1,0 +1,132 @@
+{
+    "products":[
+        {
+            "id": "dress1",
+            "image":"https://5.imimg.com/data5/UQ/IS/MY-47151525/untitled-1-recovered-500x500.jpg",
+            "title":"skirt",
+            "description":"this is for all latest trends",
+            "availableSizes":["S", "L", "XXL", "M"],
+            "price": 29.9
+        },
+
+        {
+            "id": "dress2",
+            "image":"https://4.imimg.com/data4/VC/RS/MY-36518128/fancy-churidar-suit-500x500.jpg",
+            "title":"skirt",
+            "description":"this is for all latest trends",
+            "availableSizes":["X", "L", "XXL", "M"],
+            "price": 30.9
+        },
+
+        {
+            "id": "dress3",
+            "image":"https://5.imimg.com/data5/LS/BI/MY-78092609/fancy-churidar-dress-material-500x500.jpg",
+            "title":"jeans",
+            "description":"this is for all latest trends",
+            "availableSizes":["X", "S", "XXL", "XL"],
+            "price": 31.9
+        },
+
+        {
+            "id": "dress4",
+            "image":"https://4.imimg.com/data4/FB/CC/MY-2520029/chanderi-silk-saree-500x500.jpg",
+            "title":"top",
+            "description":"this is for all latest trends",
+            "availableSizes":["X", "L", "S", "XL"],
+            "price": 25.9
+        },
+
+        {
+            "id": "dress5",
+            "image":"https://5.imimg.com/data5/SELLER/Default/2020/9/ZY/GL/FU/78879792/linen2indiamart-500x500.jpg",
+            "title":"skirts",
+            "description":"this is for all latest trends",
+            "availableSizes":["X", "L", "M", "XL"],
+            "price": 24
+        },
+
+        {
+            "id": "dress6",
+            "image":"/images/dress6.jpg",
+            "title":"skirt",
+            "description":"this is for all latest trends",
+            "availableSizes":["X", "L", "XXL", "XL"],
+            "price": 21.9
+        },
+
+        {
+            "id": "dress7",
+            "image":"/images/dress7.jpg",
+            "title":"skirttop",
+            "description":"this is for all latest trends",
+            "availableSizes":["X", "L", "XXL", "XL"],
+            "price": 34.8
+        },
+
+        {
+            "id": "dress8",
+            "image":"/images/dress8.jpg",
+            "title":"mididress&top",
+            "description":"this is for all latest trends",
+            "availableSizes":["X", "L", "XXL", "XL"],
+            "price": 59.9
+        },
+
+        {
+            "id": "dress9",
+            "image":"/images/dress9.jpg",
+            "title":"skirtwithtop",
+            "description":"this is for all latest trends",
+            "availableSizes":["X", "M", "XXL", "XL"],
+            "price": 50
+        },
+        {
+            "id": "dress10",
+            "image":"/images/dress10.jpg",
+            "title":"chudithar",
+            "description":"this is for all latest trends",
+            "availableSizes":["X", "L", "XXL", "M"],
+            "price": 53
+        },
+        {
+            "id": "dress11",
+            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaO0AZGxq5e-7AG0JYJzDQvKQjx5Cq8SY2tA&usqp=CAU",
+            "title":"chudithar",
+            "description":"this is for all latest trends",
+            "availableSizes":["X", "L", "XS", "XL"],
+            "price": 53
+        },
+        {
+            "id": "dress12",
+            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaO0AZGxq5e-7AG0JYJzDQvKQjx5Cq8SY2tA&usqp=CAU",
+            "title":"chudithar",
+            "description":"this is for all latest trends",
+            "availableSizes":["X", "L", "XXL", "XL"],
+            "price": 53
+        },
+        {
+            "id": "dress13",
+            "image":"https://4.imimg.com/data4/VC/RS/MY-36518128/fancy-churidar-suit-500x500.jpg",
+            "title":"skirt",
+            "description":"this is for all latest trends",
+            "availableSizes":["X", "L", "XXL", "M"],
+            "price": 30.9
+        },
+        {
+            "id": "dress14",
+            "image":"https://4.imimg.com/data4/VC/RS/MY-36518128/fancy-churidar-suit-500x500.jpg",
+            "title":"skirt",
+            "description":"this is for all latest trends",
+            "availableSizes":["X", "L", "XXL", "M"],
+            "price": 30.9
+        },
+        {
+            "id": "dress15",
+            "image":"https://4.imimg.com/data4/VC/RS/MY-36518128/fancy-churidar-suit-500x500.jpg",
+            "title":"skirt",
+            "description":"this is for all latest trends",
+            "availableSizes":["X", "L", "XXL", "M"],
+            "price": 30.9
+        }
+    ]
+}
