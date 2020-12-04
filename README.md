@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Shopping cart web app
 This project is shopping cart web app using react and redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
