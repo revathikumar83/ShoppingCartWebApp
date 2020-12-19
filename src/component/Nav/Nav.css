@@ -1,8 +1,8 @@
 .header{
     grid-area: header;
-    background-color: lightgray;
-    height: 100px;
-    margin-bottom: 200px;
+    background-color:lightgray;
+    height: 70px;
+    margin-bottom: 20px;
     
 }
 .head{

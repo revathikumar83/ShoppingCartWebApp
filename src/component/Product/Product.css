@@ -6,9 +6,9 @@
     display: grid;
     justify-content: space-between;
   grid-template-columns:  350px 350px 350px 350px; /*Make the grid smaller than the container*/
-  grid-gap: 20px;
-    overflow: hidden;
-  
+  grid-gap: 25px;
+    
+  overflow: hidden;
   
 }
 .title{
@@ -37,13 +37,21 @@
     background-color: honeydew;
     
 }
+  img .zoom{
+      
+    transition: 2s all ease;
+}
+img .zoom:hover{
+    max-width: 320px;
+    max-height: 320px;
+    
+}
 .product__list :hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
 }
-.zoom{
-    background-color: rgb(240, 15, 49);
-}
+
+    
 
 
 .product__title{
@@ -96,8 +104,19 @@
 }
 .modal img{
     max-width: 95rem;
-    max-height: 80vh;
+    max-height: 60vh;
     margin: 0 auto;
+}
+
+.modal img{
+    
+  transition: 2s all ease-in-out;
+  
+}
+.modal img:hover{
+    max-width: 135rem;
+    max-height: 90vh;
+    
 }
 .modal__desc{
     flex: 1 1;
@@ -121,9 +140,12 @@ flex-direction: column;
     border-radius: 10px;
     width:30%;
     margin-top: 40px;
+    padding: 10px;
+    font-size: 18px;
 
 
 }
+
 
 
 

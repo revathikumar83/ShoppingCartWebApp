@@ -1,4 +1,4 @@
-.App {
+/*.App {
   display: grid;
     height: 100vh;
     grid-template-areas: "header"
@@ -26,7 +26,7 @@
 }
 
 
-/*larger screens */
+/*larger screens 
 
 @media (max-width: 1101px) {
   .App {
@@ -55,4 +55,26 @@
 .content{
   display: flex;
   flex-wrap: wrap;
+}*/
+.person{
+color:red;
+margin-left: 89%;
+margin-top: 12px;
+
 }
+.margin{
+  color: red;
+  margin-left: 25px;
+  margin-right: 2px;
+  margin-top: -100px;
+  margin-bottom: -20px;
+
+}
+
+
+h4{
+  float:center;
+  margin-left: 50%;
+}
+
+
