@@ -21,7 +21,7 @@ class App extends React.Component {
               <Link to="/" className="margin"><HomeIcon  className="name"  fontSize="large" /> 
               </Link>
               
-              <Link to="/admin"  ><PersonIcon  className="person" fontSize='large'/></Link>
+              <Link to="/order"  ><PersonIcon  className="person" fontSize='large'/></Link>
               
               
               </header>

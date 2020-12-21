@@ -2,14 +2,13 @@
 .product{
     grid-area: main;
     background-color:lightgray;
-    flex: 3 60rem;
+    flex: 3 80rem;
     display: grid;
     justify-content: space-between;
-  grid-template-columns:  350px 350px 350px 350px; /*Make the grid smaller than the container*/
-  grid-gap: 25px;
-    
-  overflow: hidden;
-  
+    grid-template-columns:  350px 350px 350px 350px; /*Make the grid smaller than the container*/
+    grid-gap: 25px;
+    overflow: scroll;
+
 }
 .title{
     color: black;
@@ -52,17 +51,13 @@ img .zoom:hover{
 }
 
     
-
-
 .product__title{
     width:90%;
-    
     display: flex;
     flex-direction: row;
     padding: 10px;
     margin: 10px;
     justify-content: space-between;
-    /*background-color:green;*/
     background-color: honeydew;
     
     
@@ -70,23 +65,10 @@ img .zoom:hover{
 .product__title:hover{
     text-decoration: none;
     opacity: 0.9;
-    
     background-color: white;
-    
-    
-    
-
 }
 
-/*img .zoom{
-    background-color: lightpink;
-    transition: transform .25s ease-in-out;
-}
-.zoom:hover{
-    
-    transform: scale(1.5); 
-}*/
-.button{
+.product__button{
     background-color: turquoise;
     color: tomato;
     border-radius: 10%;

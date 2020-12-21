@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import { Link } from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import './Product.css';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
@@ -53,7 +52,7 @@ const {product} = this.state;
                        <p className="title">{product.title}</p>
                 
                         <p className="price">${product.price}</p>
-                        <button className="button" onClick={()=>this.props.addToCart(product)}><ShoppingCartIcon className="car"/>cart</button>
+                        <button className="product__button" onClick={()=>this.props.addToCart(product)}><ShoppingCartIcon className="car"/>cart</button>
                          </div>
                     </div>
                 ))}

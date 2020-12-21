@@ -1,4 +1,4 @@
-import {FETCH_PRODUCTS, FILTER_PRODUCTS_BY_SIZE, ORDER_PRODUCTS_BY_PRICE,
+import {FETCH_PRODUCTS, FILTER_PRODUCTS_BY_SIZE, ORDER_PRODUCTS_BY_PRICE, SEARCH_PRODUCTS
          } from "../types";
 
 export const fetchProducts  = () => async (dispatch) => {
@@ -9,6 +9,18 @@ export const fetchProducts  = () => async (dispatch) => {
        payload:data
    })
 }
+export const searchProducts  = (product, input) =>  (dispatch) => {
+    
+    dispatch({
+        type:SEARCH_PRODUCTS,
+        payload:{
+            input:input,
+            items:  product.filter((x) =>
+            x.title.toLowerCase().includes(input.toLowerCase())
+        )
+        }
+    });
+ }
 
 export const filterProducts  = (products,size) =>  (dispatch) => {
     
@@ -50,3 +62,5 @@ dispatch({
     },
 });
  }
+
+ 

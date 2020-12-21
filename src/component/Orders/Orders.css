@@ -1,5 +1,33 @@
-.orders{
-   height: 100vh;
-   background-color: bisque;
-    
+.orderslist{
+margin-left: 45%;
+color: crimson;
 }
+.orders1 h2{
+margin-left: 45%;
+color: crimson;
+}
+.orders1{
+  height:100vh;
+  background-color: white;
+}
+ table, thead,  th{
+    margin-right: 200px;
+    margin-left: 50px;
+}
+td{
+    margin-top: 50px;
+}
+table {
+    
+    width:95%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 25px;
+    text-align: left;
+  }
+  table, td, th {  
+    border: 1px solid rgb(167, 170, 173);
+    
+  }
+  

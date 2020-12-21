@@ -1,27 +1,22 @@
 import React, { Component } from 'react';
-import {Link, Route} from 'react-router-dom';
 import './Filter.css';
-import HomeIcon from '@material-ui/icons/Home';
 import { connect } from 'react-redux';
 import {filterProducts, sortProducts} from '../../actions/productAction';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import {searchProducts} from '../../actions/productAction';
 
-//import OrderScreen from '../Screens/OrderScreen';
-//import HomeScreen from '../Screens/HomeScreen';
+
 
 class Filter extends Component{
     
     render(){
-        const { showcart}=this.props;
+        const { showcart,login}=this.props;
         const { cartItems } = this.props;
         return(
             !this.props.filteredProduct ? (<div>Loading...</div>) :
             ( <div className="filter">
-                
-              
-                
-                <input className="input" placeholder='search' value={this.props.inputValue} onChange={this.props.searchItems}/><SearchIcon/>
+                <input className="input" placeholder='search' value={this.props.input} onChange={(e)=>this.props.searchProducts(this.props.products, e.target.value)}/><SearchIcon/>
                 
           <div className="filter__count">{this.props.filteredProduct.length} products</div>  
           <div className="filter__size">size
@@ -42,9 +37,9 @@ class Filter extends Component{
               <option value="lowest">Lowest</option>
               </select>
               </div>
-            <div>
-                <p>sign in</p>  
-          </div>
+            <div className="shopcart1" onClick={()=>this.props.showlogin(login)}>
+                sign in
+        </div>
         <div className="shopcart" onClick={()=>this.props.openmodal(showcart)} >
             <ShoppingCartIcon className="cart1" fontSize='large'  /> 
              {cartItems.length}
@@ -63,13 +58,16 @@ export default connect(
         size: state.products.size,
         sort: state.products.sort,
         products: state.products.items,
+        
         cartItems: state.cart.cartItems,
-        filteredProduct: state.products.filteredItems
+        filteredProduct: state.products.filteredItems,
+        input: state.products.input,
 
 
     }),
     {
     filterProducts,
-    sortProducts
+    sortProducts,
+    searchProducts
    }
 ) (Filter);

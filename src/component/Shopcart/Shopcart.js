@@ -5,7 +5,7 @@ import formatCurrency from '../../util';
 import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+//import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Fade from 'react-reveal/Fade';
 import Modal from 'react-modal';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
@@ -25,11 +25,17 @@ class Shopcart extends Component{
                 email: "",
                 address: "",
                 showcheckout:false,
-                checkout: false
+                checkout: false,
+                
                 
             }
         
     }
+
+    handleInput=(event)=>{
+        this.setState({
+  [event.target.name]: event.target.value });
+  }
 
     openmodal=()=>{
     
@@ -39,22 +45,17 @@ class Shopcart extends Component{
     }
     
     
-    handleInput=(event)=>{
-          this.setState({
-    [event.target.name]: event.target.value
-   //name: event.target.value,
-   //address: event.target.value,
-   //email: event.target.value
-});
+    
 
-}
+
+
 
 createOrder=(event)=>{
     event.preventDefault();
     const order = {
-        name:this.state.name,
-        email:this.state.email,
-        address:this.state.address,
+        name: this.state.name,
+        email: this.state.email,
+        address: this.state.address,
         cartItems: this.props.cartItems,
         total: this.props.cartItems.reduce((a,c)=> (a + c.price*c.count) , 0)
     }
@@ -66,13 +67,18 @@ closemodal=()=>{
         checkout:false
     }) 
 }
+
 closeorder=()=>{
     this.props.clearOrder();
 }
+
     componentDidMount() {
     this.props.createOrder();
   }
+
+
     render(){
+
         const{checkout}=this.state;
         const{showcart}=this.props;
         const { cartItems, order } =this.props;
@@ -82,7 +88,7 @@ closeorder=()=>{
 
     <div className="cart">
 
-<div>
+<div className="modal">
 
 { checkout && ( 
 <Modal isOpen={true} onRequestClose={this.closemodal} >
@@ -91,45 +97,26 @@ closeorder=()=>{
             x
         </button>
         
-    {order && ( 
+{order && ( 
             
-    <div className="order-details">
-    
-            
-            <h3 className="success-orders">
+        <div className="order-details">
+        <h3 className="success-orders">
                 your order has been placed
             </h3>
-            
-            
-            <h2>order id:  {order.id}</h2>
             <div className="order-list">
-                <div >
-                <p>Name:</p>
-                <p>{order.name}</p>
-                </div>
-                <div>
-                <p>Email:</p>
-                <p>{order.email}</p>
-                </div>
-                <div>
-                <p>Address:</p>
-                <p>{order.address}</p>
-                </div>
-                <div>
-                <p>Time:</p>
-                <p>{order.createdAt}</p>
-                <p>total:{order.total}</p>
-                </div>
-                <div>
-                <p>cart Items:</p>
-                <p>{order.cartItems.map((items) =>(
-                    <div>{items.count} {" x "} {items.title}</div>))}
+               <h3>order id: <span> {order.id} </span></h3>
+                <p>Name: <span>{order.name}</span></p>
+                
+                <p>Email: <span>{order.email}</span></p>
+                <p>Address:<span> {order.address} </span></p>
+                <p>Time:<span>{order.createdAt}</span> </p>
+                 <p>Total:  <span>${order.total}</span></p>
+                 <p>cart Items: {order.cartItems.map((items) =>(
+                    <span>{items.count} {" x "} {items.title}</span>))}
                 </p>  
-                </div>
-
-            </div>
+             </div>
             
-            </div>
+        </div>
             
             
         )}
@@ -145,7 +132,7 @@ closeorder=()=>{
                       x
             </button>
 
-            <ArrowBackIcon/>
+            
 
             <div className="cart_checkout">
                  
@@ -204,15 +191,32 @@ closeorder=()=>{
                     <div>
                     {this.state.showcheckout && (
                                     <div >
-                                    <form className="form"   onSubmit={this.createOrder}>
-                                      <label>name:</label>  
-                                    <input name="name"  type="text" required onChange={this.handleInput}></input>
-                                    E-mail:
-                                    <input name="email" type="email" required onChange={this.handleInput}/>
-                                    Address:
-                                    <input name="address" type="address" required onChange={this.handleInput}/>
+                                    <form className="form"  method='POST' onSubmit={this.createOrder}>
+                                    <label>Name</label>
+                          <input
+                            name="name"
+                            type="text"
+                            required
+                            onChange={this.handleInput}
+                          ></input>
+
+                                    <label>Email</label>
+                                    <input
+                            name="email"
+                            type="email"
+                            required
+                            onChange={this.handleInput}
+                          ></input>
+                           <label>Address</label>
+                          <input
+                            name="address"
+                            type="text"
+                            required
+                            onChange={this.handleInput}
+                          ></input>
+                               <button className="cartbtn"  onClick={()=>this.openmodal(checkout)} >proceed</button>           
                                     </form>
-                    <button className="cartbtn"  onClick={()=>this.openmodal(checkout)}  >proceed</button>
+                    
                                     </div>
                                     
                                     

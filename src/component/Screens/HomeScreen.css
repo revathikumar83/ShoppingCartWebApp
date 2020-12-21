@@ -4,11 +4,11 @@
       grid-template-areas: "header"
       "main"
       "footer";
-      grid-template-rows: 2rem 1fr 5rem;
+      grid-template-rows: 2rem 1fr 2rem;
       grid-template-columns: 1fr;
-      border: 2px gray;
+     
       grid-gap: 25px;
-      background-color: white;
+      background-color: lightgray;
   }
   @media (min-width: 600px) and (max-width: 1100px) {
     .App {
@@ -17,11 +17,10 @@
       grid-template-areas: "header"
       "main"
       "footer";
-      grid-template-rows: 5rem 1fr 5rem;
+      grid-template-rows: 2rem 1fr 5rem;
       grid-template-columns: 1fr;
-      border: 2px gray;
       grid-gap: 25px;
-      background-color: white;
+      background-color: lightgray;
     }
   }
   
@@ -35,22 +34,24 @@
       grid-template-areas: "header"
       "main"
       "footer";
-      grid-template-rows: 5rem 1fr 5rem;
+      grid-template-rows: 2rem 1fr 5rem;
       grid-template-columns: 1fr;
-      border: 2px gray;
       grid-gap: 25px;
-      background-color: white;
+      background-color: lightgray;
     }
   }
   
   .footer{
     grid-area: footer;
+    margin-top: -10px;
+    margin-bottom: -100px;
     background-color: lightgray;
     text-align: center;
-      padding: 10px;
-      color: rgb(3, 1, 14);
-      font-size: 20px;
-      font-weight: bold;
+    color: rgb(51, 48, 48);
+    padding-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+      
   }
   .content{
     display: flex;

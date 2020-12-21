@@ -9,4 +9,4 @@ export const CLEAR_ORDER = "CLEAR_ORDER";
 export const FETCH_ORDERS = "FETCH_ORDERS";
 export const INCREMENT_ITEM = "INCREMENT_ITEM";
 export const DECREMENT_ITEM = "DECREMENT_ITEM";
-
+export const SEARCH_PRODUCTS = "SEARCH_PRODUCTS";

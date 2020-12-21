@@ -45,7 +45,7 @@ app.delete('/api/products/:id', async (req,res)=>{
 })
 
 const Order = mongoose.model(
-    "order",
+    "orders",
     new mongoose.Schema({
         id: { type: String,  default: shortId.generate },
         email: String,
@@ -77,6 +77,7 @@ const Order = mongoose.model(
       ) {
         return res.send({ message: "Data is required." });
       }*/
+      
       const newOrder = await Order(req.body)
       const order = await newOrder.save();
       res.send(order);  

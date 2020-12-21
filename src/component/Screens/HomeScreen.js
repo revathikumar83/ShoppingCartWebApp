@@ -12,40 +12,52 @@ import Navbar from '../Nav/Navbar';
 import Product from '../Product/Product';
 import Shopcart from '../Shopcart/Shopcart';
 import data from '../../data.json';
+import Signup from '../../component/Login/Signup';
 
 
 
 
 
 class HomeScreen extends Component {
-  constructor(props){
-    super(props);
-    this.state={
-      products: data.products,
-      /*cartItems:localStorage.getItem("cartItems")?JSON.parse(localStorage.getItem("cartItems")):[],
-      size:"",
-      sort:"",*/
-      showcart: false,
-      inputValue: '',
-      
-      
-    }
-  }
-
-  
   
 
-  openmodal=()=>{
+    constructor(props){
+        super(props);
+        this.state={
+         
+          showcart: false,
+          login: false,
+          
+          
+        }
+      }
     
-    this.setState({
-        showcart:true
-    })
-
-}
-closemodal=()=>{
-    this.setState({showcart:false});
-}
-
+      
+      showlogin=()=>{
+        this.setState({
+            login:true
+        })
+      }
+      hidelogin=()=>{
+        this.setState({
+            login:false
+        })
+      }
+    
+    openmodal=()=>{
+        
+        this.setState({
+            showcart:true
+        })
+    
+    }
+    closemodal=()=>{
+        
+        this.setState({
+            showcart:false
+        })
+    
+    }
 
 
  /* creatOrder=(order)=>{
@@ -77,6 +89,20 @@ closemodal=()=>{
     cartItems: cartItems.filter((item) => item.id !== product.id)
   })
   }
+
+  searchItems=(event)=>{
+    event.preventDefault();
+    console.log(event.target.value);
+
+    this.setState({
+      inputValue: event.target.value,
+      products: this.state.products.filter(product =>
+        product.title.toLowerCase().includes(this.state.inputValue.toLowerCase())
+      )
+    })
+  }
+
+
 
   increment=(product)=>{
     this.setState ({
@@ -124,19 +150,9 @@ this.setState({
   ))
 
 })
-  }*/
-
-  searchItems=(event)=>{
-    event.preventDefault();
-    console.log(event.target.value);
-
-    this.setState({
-      inputValue: event.target.value,
-      products: this.state.products.filter(product =>
-        product.title.toLowerCase().includes(this.state.inputValue.toLowerCase())
-      )
-    })
   }
+*/
+  
 
 
   /*filterProducts=(event)=>{
@@ -171,12 +187,14 @@ if(event.target.value===""){
                size={this.state.size} 
                sortProducts={this.sortProducts} 
                 filterProducts={this.filterProducts} 
-                cartItems={this.state.cartItems} */
+                cartItems={this.state.cartItems} 
+                
+                searchItems={this.searchItems}
+                inputValue={this.state.inputValue}*/
                 showcart={this.state.showcart} 
                 openmodal={this.openmodal}
-                searchItems={this.searchItems}
-                inputValue={this.state.inputValue}
-                
+                login={this.state.login}
+                showlogin={this.showlogin}
 
                 />
       
@@ -191,16 +209,18 @@ if(event.target.value===""){
       <Shopcart  showcart={this.state.showcart} 
                  openmodal={this.openmodal} 
                  closemodal={this.closemodal}  
-                 /*cartItems={this.state.cartItems} 
+                /* cartItems={this.state.cartItems} 
                  removefromcart={this.removeFromCart} 
                  increment={this.increment}
                  decrement={this.decrement}  
                  /*creatOrder={this.creatOrder}*/
                  />
-               
+           <Signup  login={this.state.login}
+                     showlogin={this.showlogin}
+                     hidelogin={this.hidelogin}/>    
 
        <footer className="footer">
-        @copyright is reseverd
+        @copyright is reserved
       </footer>
 
 

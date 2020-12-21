@@ -16,17 +16,7 @@ export const createOrder = (order) => (dispatch) => {
     });
 };
 
-  /* export const createOrder  = (order) => async (dispatch) => {
-    const res = await fetch("/api/orders");
-    const data = await res.json(order);
-    dispatch({
-        type:CREATE_ORDER,
-        payload:data
-    })
-    localStorage.clear("cartItems");
-      dispatch({ type: CLEAR_CART });
-    
- }*/
+  
 
 export const clearOrder = () => (dispatch) => {
   dispatch({ type: CLEAR_ORDER });
