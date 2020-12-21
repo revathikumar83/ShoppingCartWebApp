@@ -12,7 +12,7 @@ app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
 
 // --> Add this
 // ** MIDDLEWARE ** //
-const whitelist = ['http://localhost:3000', 'http://localhost:3001', 'https://shrouded-journey-38552.herokuapp.com']
+const whitelist = ['http://localhost:3000', 'http://localhost:3001', 'https://shoppingcartwebapp.herokuapp.com']
 const corsOptions = {
   origin: function (origin, callback) {
     console.log("** Origin of request " + origin)
