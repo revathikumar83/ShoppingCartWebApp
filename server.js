@@ -96,14 +96,7 @@ const Order = mongoose.model(
     res.send(order);
   });
 
-  //--> add this for heroku
-
-  if(process.env.NODE_ENV === 'production'){
-    app.use(express.static(path.join(__dirname, 'client/build')));
-    app.get('*', function(req,res){
-      res.sendFile(path.join(__dirname, 'client/build','index.html'));
-    })
-  }
+  
 
 const port = process.env.PORT || 3000;
 app.listen(port, ()=>console.log('app is running on http://localhost:3000'));
