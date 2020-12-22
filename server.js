@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use("/", express.static(__dirname + "/build"));
 app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
 
-const MONGODB_URL = process.env.MONGODB_URL
+//const MONGODB_URL = process.env.MONGODB_URL
 
 
 mongoose.connect( MONGODB_URL || "mongodb://localhost/shopping-cartapp",
