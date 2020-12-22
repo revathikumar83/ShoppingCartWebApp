@@ -6,14 +6,15 @@ const app = express();
 app.use(bodyParser.json());
 //import MONGODB_URL from './src/dev';
 
-
+if(process.env.NODE_ENV === "production"){
 app.use("/", express.static(__dirname + "/build"));
+}
 app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
 
-const MONGODB_URL = 'mongodb+srv://dbadmin:reactjs92dev@cluster0.8npfe.mongodb.net/shoppingcart?retryWrites=true&w=majority'
+//const MONGODB_URL = 'mongodb+srv://dbadmin:reactjs92dev@cluster0.8npfe.mongodb.net/shoppingcart?retryWrites=true&w=majority'
 
 
-mongoose.connect( MONGODB_URL || "mongodb://localhost/shopping-cartapp",
+mongoose.connect( process.env.MONGODB_URL || "mongodb://localhost/shopping-cartapp",
 {    useNewUrlParser: true,
      useCreateIndex: true,
      useUnifiedTopology:true
