@@ -4,15 +4,16 @@ const mongoose = require("mongoose");
 const shortId = require("short-id");
 const app = express();
 app.use(bodyParser.json());
+import MONGODB_URL from './src/dev';
 
 
 app.use("/", express.static(__dirname + "/build"));
 app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
 
+const MONGODB_URL = process.env.MONGODB_URL
 
 
-
-mongoose.connect( process.env.MONGODB_URL || "mongodb://localhost/shopping-cartapp",
+mongoose.connect( MONGODB_URL || "mongodb://localhost/shopping-cartapp",
 {    useNewUrlParser: true,
      useCreateIndex: true,
      useUnifiedTopology:true
