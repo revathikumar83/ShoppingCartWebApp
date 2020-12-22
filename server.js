@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const shortId = require("short-id");
 const app = express();
 app.use(bodyParser.json());
-import MONGODB_URL from './src/dev';
+//import MONGODB_URL from './src/dev';
 
 
 app.use("/", express.static(__dirname + "/build"));
