@@ -10,10 +10,9 @@ app.use("/", express.static(__dirname + "/build"));
 app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
 
 
-const MONGODB_URL =  'mongodb+srv://dbadmin:reacjs92@dev@cluster0.8npfe.mongodb.net/shoppingcart?retryWrites=true&w=majority'
 
 
-mongoose.connect( MONGODB_URL || "mongodb://localhost/shopping-cartapp",
+mongoose.connect( process.env.MONGODB_URL || "mongodb://localhost/shopping-cartapp",
 {    useNewUrlParser: true,
      useCreateIndex: true,
      useUnifiedTopology:true
